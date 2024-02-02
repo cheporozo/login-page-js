@@ -1,3 +1,4 @@
+
 const mensajeError = document.getElementsByClassName("error")[0];
 
 document.getElementById("register-form").addEventListener("submit",async(e)=>{
