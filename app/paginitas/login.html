@@ -12,13 +12,14 @@
     <main>
         <div class="form-container">
             <h1>Iniciar sesión</h1>
-            <p>Ingresa tus datos para identificarte </p>
+            <p>Ingresa tus datos para entrar </p>
             <form id="login-form">
-                <label for="user">Usuario</label>
+                <label for="user" class="sr-only">Usuario</label>
                 <input type="text" name="user" id="user" placeholder="Nombre de usuario">
-                <label for="password">Password</label>
+                <label for="password" class="sr-only">Password</label>
                 <input type="text" name="password" id="password" placeholder="Contraseña">
                 <button type="submit">Iniciar Sesión</button>
+                <p class="error hidden">Error al iniciar sesion</p>
             </form>
             <p>Si no tienes una cuenta procede a registrarte <a href="/register">registrate aqui</a></p>
         </div>

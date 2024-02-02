@@ -3,7 +3,7 @@ import express from "express"
 import path from 'path';
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
+import { methods as authentication } from "./controllers/authentication.controller.js";
 
 
 //server 
@@ -19,4 +19,6 @@ app.use(express.static(__dirname + "/publicazo"))
 //routes 
 app.get("/",(req,res)=> res.sendFile(__dirname + "/paginitas/login.html"))
 app.get("/register",(req,res)=> res.sendFile(__dirname + "/paginitas/register.html"))
-
+app.get("/admin",(req,res)=> res.sendFile(__dirname + "/paginitas/admin/admin.html"))
+app.get("/api/register",authentication.register)
+app.get("/api/login",authentication.login)
